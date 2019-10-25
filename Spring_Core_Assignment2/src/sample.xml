@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+
+<beans>
+   
+   <bean id="q1" class="com.ramya.assignment.Question">
+  <property name="question" value="What is Java?"></property>
+  <property name="answers" value="Java is a programming language"></property>
+   </bean>
+   
+   <bean id="collection" class="com.ramya.assignment.Question">
+  	<property name="answer1">
+  	<list><value>1</value>
+  	<ref bean="q1"/>
+  	</list>
+  	</property>
+  	
+  	<property name="answer2">
+  	<set><value>2</value>
+  	<ref bean="q1"/>
+  	</set>
+  	</property>
+   
+   <property name="answer3">
+   <map><entry key="1" value="1"></entry>
+   <entry key="2" value-ref="q1"></entry>
+   </map>
+   
+   </property>
+   
+   
+   </bean>
+
+</beans>
