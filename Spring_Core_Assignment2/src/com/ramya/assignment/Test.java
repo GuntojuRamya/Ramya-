@@ -5,7 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test 
 {
-
 	public static void main(String[] args)
 	{
 		ApplicationContext context=new ClassPathXmlApplicationContext("sample.xml");
@@ -13,7 +12,6 @@ public class Test
 		System.out.println("List: "+question.getAnswer1());
 		System.out.println("Set: "+question.getAnswer2());
 		System.out.println("Map: "+question.getAnswer3());
-		
 	}
 
 }
